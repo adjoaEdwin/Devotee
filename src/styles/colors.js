@@ -1,0 +1,11 @@
+export const title = '#00B75D';
+export const text = '#0C222B';
+export const primary = '#0a0a22';
+export const white = '#FFF';
+export const lighter = '#F3F3F3';
+export const light = '#DAE1E7';
+export const dark = '#102c3c';
+export const black = '#000';
+export const grey = '#435d6b';
+export const lightGrey = '#667c8a';
+export const background = '#e7edf4';
