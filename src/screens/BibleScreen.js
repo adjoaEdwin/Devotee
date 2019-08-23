@@ -1,40 +1,18 @@
 import React from 'react';
-import {View, Text, ScrollView, StyleSheet} from 'react-native';
-import {baseStyle} from 'styles/theme';
-import {TextInput} from '../components/Input';
-import {dark} from '../styles/colors';
+import {View, Text} from 'react-native';
+import {headerStyle} from 'styles/theme';
+import {Input} from '../components/Input';
 
 const Bible = () => {
+  //   const {headerStyle} = styles;
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <View style={baseStyle}>
-        <Text>Bible screen</Text>
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Email"
-          //   value={}
-          //   onChangeText={}
-          autoCorrect={false}
-        />
+    <View>
+      <View>
+        <Text style={{...headerStyle}}>Bible screen📖</Text>
+        <Text>Hello world</Text>
       </View>
-    </ScrollView>
+    </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginBottom: 20,
-    paddingRight: 20,
-    paddingLeft: 20,
-    marginTop: 20,
-  },
-  inputStyle: {
-    height: 40,
-    color: dark,
-    fontSize: 18,
-    lineHeight: 23,
-    borderColor: '#000',
-  },
-});
 
 export default Bible;

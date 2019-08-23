@@ -5,21 +5,21 @@ import {
   createAppContainer,
   createBottomTabNavigator,
 } from 'react-navigation';
-import HomeStack from 'screens/HomeScreen';
+import HomeScreen from 'screens/HomeScreen';
 import MessageScreen from 'screens/AddMessage';
 import BibleScreen from 'screens/BibleScreen';
-import SettingsScreen from 'screens/SettingsScreen';
-import Icon from 'react-native-vector-icons/AntDesign';
+import ProfileScreen from 'screens/ProfileScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {primary, lightGrey} from 'styles';
 
 const AppStack = createBottomTabNavigator(
   {
     Home: {
-      screen: HomeStack,
+      screen: HomeScreen,
       navigationOptions: {
         tabBarLabel: 'Home',
         tabBarIcon: ({focused, tintColor}) => (
-          <Icon name="home" color={tintColor} theme="filled" size={30} />
+          <Icon name="ios-home" color={tintColor} theme="filled" size={30} />
         ),
       },
     },
@@ -28,7 +28,7 @@ const AppStack = createBottomTabNavigator(
       navigationOptions: {
         header: null,
         tabBarIcon: ({focused, tintColor}) => (
-          <Icon name="book" color={tintColor} theme="filled" size={30} />
+          <Icon name="ios-book" color={tintColor} theme="filled" size={30} />
         ),
       },
     },
@@ -37,16 +37,21 @@ const AppStack = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Message',
         tabBarIcon: ({focused, tintColor}) => (
-          <Icon name="pluscircle" color={tintColor} theme="filled" size={30} />
+          <Icon
+            name="ios-add-circle-outline"
+            color={tintColor}
+            theme="filled"
+            size={30}
+          />
         ),
       },
     },
-    Settings: {
-      screen: SettingsScreen,
+    Profile: {
+      screen: ProfileScreen,
       navigationOptions: {
-        tabBarLabel: 'Settings',
+        tabBarLabel: 'Profile',
         tabBarIcon: ({focused, tintColor}) => (
-          <Icon name="setting" color={tintColor} theme="filled" size={30} />
+          <Icon name="ios-person" color={tintColor} theme="filled" size={30} />
         ),
       },
     },

@@ -1,9 +1,9 @@
-import React from "react";
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
-import { colors, fonts } from "styles";
+import React from 'react';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {primary} from '../styles/colors';
 
-const SecondaryBtn = ({ onPress, children }) => {
-  const { buttonStyle, textStyle } = styles;
+const SecondaryBtn = ({onPress, children}) => {
+  const {buttonStyle, textStyle} = styles;
 
   return (
     <TouchableOpacity style={buttonStyle} onPress={onPress}>
@@ -14,22 +14,22 @@ const SecondaryBtn = ({ onPress, children }) => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    color: colors.primary,
-    alignSelf: "center",
-    fontSize: 16
+    color: primary,
+    alignSelf: 'center',
+    fontSize: 16,
   },
   buttonStyle: {
     borderRadius: 5,
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     borderWidth: 1,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     padding: 20,
     marginTop: 5,
     marginBottom: 5,
     marginRight: 20,
     marginLeft: 20,
-    borderColor: "transparent"
-  }
+    borderColor: 'transparent',
+  },
 });
 
-export { SecondaryBtn };
+export {SecondaryBtn};

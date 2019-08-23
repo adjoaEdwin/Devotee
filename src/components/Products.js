@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
-import { Card } from "react-native-elements";
-import moveToBottom from "../api/moveToBottom";
-import { SmallBtn } from "components";
-import { fonts } from "styles";
+import React, {Component} from 'react';
+import {View, Text, Image, StyleSheet} from 'react-native';
+import {Card} from 'react-native-elements';
+import {fonts} from 'styles';
 
 class Products extends Component {
   state = {};
@@ -17,16 +15,16 @@ class Products extends Component {
       buttonContainer,
       leftContainer,
       leftItems,
-      rightItems
+      rightItems,
     } = styles;
 
     return (
       <View>
-        <Card>
+        <Card containerStyle={{borderRadius: 100 / 3, elevation: 2}}>
           <View style={summaryContainer}>
             <View style={leftContainer}>
               <Image
-                source={require("assets/images/groundnuts.jpg")}
+                source={require('assets/images/groundnuts.jpg')}
                 style={imageStyle}
                 accessibilityLabel="Groundnuts"
               />
@@ -37,32 +35,27 @@ class Products extends Component {
                 <Text
                   style={[
                     rightItems,
-                    { ...fonts.bold, fontSize: fonts.tertiary.fontSize }
-                  ]}
-                >
+                    {...fonts.bold, fontSize: fonts.tertiary.fontSize},
+                  ]}>
                   Exotic Groundnuts
                 </Text>
                 <Text
                   style={[
                     rightItems,
-                    { ...fonts.bold, fontSize: fonts.tertiary.fontSize }
-                  ]}
-                >
+                    {...fonts.bold, fontSize: fonts.tertiary.fontSize},
+                  ]}>
                   Lorem ipsum Donor item
                 </Text>
                 <Text
                   style={[
                     rightItems,
-                    { ...fonts.bold, fontSize: fonts.tertiary.fontSize }
-                  ]}
-                >
-                  <Text style={{ ...fonts.tertiary }}>GHC</Text> 9,000.00
+                    {...fonts.bold, fontSize: fonts.tertiary.fontSize},
+                  ]}>
+                  <Text style={{...fonts.tertiary}}>GHC</Text> 9,000.00
                 </Text>
               </View>
             </View>
           </View>
-
-          {/* {moveToBottom(<SmallBtn>Add</SmallBtn>)} */}
         </Card>
       </View>
     );
@@ -72,40 +65,40 @@ class Products extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   imageStyle: {
     borderRadius: 100 / 2,
-    alignSelf: "center",
+    alignSelf: 'center',
     width: 100,
-    height: 100
+    height: 100,
   },
   itemStyle: {
-    alignItems: "center",
-    marginTop: 30
+    alignItems: 'center',
+    marginTop: 30,
   },
   itemTextStyle: {
-    ...fonts.bold
+    ...fonts.bold,
   },
   orderNumStyle: {
-    ...fonts.tertiary
+    ...fonts.tertiary,
   },
   summaryContainer: {
-    flexDirection: "row",
-    justifyContent: "space-evenly"
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
   leftContainer: {
-    flexDirection: "column",
-    alignContent: "space-between"
+    flexDirection: 'column',
+    alignContent: 'space-between',
   },
   leftItems: {
     marginBottom: 20,
-    textAlign: "right"
+    textAlign: 'right',
   },
   rightItems: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 });
 
 export default Products;

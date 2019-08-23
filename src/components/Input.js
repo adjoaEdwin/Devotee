@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TextInput} from 'react-native';
 import {dark} from 'styles';
-import {Input} from 'react-native-elements';
+//import {Input} from 'react-native-elements';
 
-const TextInput = ({
+const Input = ({
   title,
   placeholder,
   onChangeText,
@@ -13,9 +13,8 @@ const TextInput = ({
   value,
 }) => {
   return (
-    <Input
+    <TextInput
       inputStyle={styles.inputStyle}
-      containerStyle={styles.container}
       title={title}
       value={value}
       placeholder={placeholder}
@@ -28,19 +27,18 @@ const TextInput = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 20,
-    paddingRight: 20,
-    paddingLeft: 20,
-    marginTop: 20,
-  },
   inputStyle: {
+    marginBottom: 20,
+    padding: 10,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
     height: 40,
     color: dark,
     fontSize: 18,
     lineHeight: 23,
     borderColor: '#000',
+    backgroundColor: '#F5F5F5',
   },
 });
 
-export {TextInput};
+export {Input};
